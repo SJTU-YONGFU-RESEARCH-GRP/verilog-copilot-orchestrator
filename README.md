@@ -1,9 +1,11 @@
 ### Verilog Copilot Workflow – AI-Assisted RTL Lab
 
-[![AI Pipeline](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow/actions/workflows/ai-pipeline.yml/badge.svg)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow/actions/workflows/ai-pipeline.yml)
 [![Status: Experimental](https://img.shields.io/badge/status-experimental-orange.svg)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow/pulls)
+[![Open issues](https://img.shields.io/github/issues/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow/issues)
+[![Closed issues](https://img.shields.io/github/issues-closed/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow/issues?q=is%3Aissue+is%3Aclosed)
+[![Open PRs](https://img.shields.io/github/issues-pr/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow/pulls)
+[![Closed PRs](https://img.shields.io/github/issues-pr-closed/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow/pulls?q=is%3Apr+is%3Aclosed)
 
 ---
 
@@ -75,7 +77,7 @@ The workflow expects the following structure:
 The main interaction model is:
 
 1. **Create a GitHub Issue** using one of the AI templates.
-2. Let the **`ai-pipeline.yml`** workflow react to the issue.
+2. Let the issue-triggered workflow (when configured) react to the issue.
 3. Review the generated **code, docs, and JSON** in a pull request.
 4. When satisfied, label the PR as **`ready-to-merge`** to auto‑merge.
 
@@ -146,7 +148,7 @@ You can iterate by editing `docs/ARCHITECTURE.md` directly and/or re‑running S
    - **Description (optional)** – additional context; can be left blank.
 5. Submit the issue.
 
-The **`ai-pipeline.yml`** workflow will:
+The issue-triggered workflow (when configured) will:
 
 - Detect this is an **Implementation** issue.
 - Build a context bundle from:
@@ -173,7 +175,7 @@ You then review and, when ready, label the PR as **`ready-to-merge`**.
    - Optionally run additional local simulations (see next section).
 2. When the PR looks good:
    - Add the label **`ready-to-merge`** to the pull request.
-3. The `ai-pipeline.yml` workflow listens for `pull_request: labeled` events:
+3. The same workflow (when configured) listens for **pull_request: labeled** events:
    - When it sees `ready-to-merge`, it **automatically merges** the PR into the default branch.
 4. If you need **more tests or refinements**:
    - Open a **“AI Verification”** issue (`4_verification.yml`).

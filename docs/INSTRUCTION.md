@@ -68,9 +68,9 @@ You can repeat this for every module listed in `docs/PLAN.md`. Only the **module
 
 ### 3.2 What the automation does for an Implementation issue
 
-Once you submit the issue:
+Once you submit the issue (and when an issue-triggered workflow is configured):
 
-1. The **`ai-pipeline.yml` workflow** triggers on `issues: opened`.
+1. The workflow triggers on **issues: opened**.
 2. It parses the issue body:
    - Because you used the **AI Implementation** template, it detects **Implementation** and enables all three generation jobs: RTL, Testbench, and Documentation.
    - It reads the **Module name** from the form and uses it for filenames and prompts.
@@ -92,7 +92,7 @@ Verification can be done both manually and via the **“AI Verification”** iss
    - Run additional local simulations or checks if desired.
 2. When you are satisfied that a PR is correct:
    - Add the label **`ready-to-merge`** to the pull request.
-3. The **same `ai-pipeline.yml` workflow** listens for `pull_request: labeled` events:
+3. The same issue-triggered workflow (when configured) listens for **pull_request: labeled** events:
    - When it sees the label **`ready-to-merge`**, it will automatically merge the PR into the repository’s **default branch** (usually `main`).
 4. If coverage or tests fail, or behavior is not as expected:
    - Open a new issue with the **“AI Verification”** template (`.github/ISSUE_TEMPLATE/4_verification.yml`).
