@@ -1,17 +1,17 @@
-### Verilog Copilot Workflow – AI-Assisted RTL Lab
+### Verilog Copilot Orchestrator – AI-Assisted RTL Lab
 
-[![Status: Experimental](https://img.shields.io/badge/status-experimental-orange.svg)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow)
+[![Status: Experimental](https://img.shields.io/badge/status-experimental-orange.svg)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-orchestrator)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Open issues](https://img.shields.io/github/issues/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow/issues)
-[![Closed issues](https://img.shields.io/github/issues-closed/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow/issues?q=is%3Aissue+is%3Aclosed)
-[![Open PRs](https://img.shields.io/github/issues-pr/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow/pulls)
-[![Closed PRs](https://img.shields.io/github/issues-pr-closed/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow/pulls?q=is%3Apr+is%3Aclosed)
+[![Open issues](https://img.shields.io/github/issues/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-orchestrator)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-orchestrator/issues)
+[![Closed issues](https://img.shields.io/github/issues-closed/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-orchestrator)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-orchestrator/issues?q=is%3Aissue+is%3Aclosed)
+[![Open PRs](https://img.shields.io/github/issues-pr/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-orchestrator)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-orchestrator/pulls)
+[![Closed PRs](https://img.shields.io/github/issues-pr-closed/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-orchestrator)](https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-orchestrator/pulls?q=is%3Apr+is%3Aclosed)
 
 ---
 
 ### Overview
 
-This repository is an **AI‑assisted Verilog/SystemVerilog RTL lab** that turns GitHub Issues into a structured hardware design workflow.  
+This repository is an **AI‑assisted Verilog/SystemVerilog RTL lab** that turns GitHub Issues into a structured hardware design orchestrator.  
 It uses **issue templates**, **GitHub Actions**, and **AI agents** to generate and iterate on:
 
 - **RTL modules** in `rtl/`
@@ -21,7 +21,7 @@ It uses **issue templates**, **GitHub Actions**, and **AI agents** to generate a
 
 The core idea is to let you describe what you want in natural language and then drive a **repeatable, testable, reviewable** flow from **Specification → Implementation → Verification**, with strong emphasis on **simulation and JSON traceability**.
 
-This project is **experimental** and intended as a lab / workflow template rather than production silicon sign‑off.
+This project is **experimental** and intended as a lab / orchestrator template rather than a production silicon sign‑off.
 
 ---
 
@@ -72,7 +72,7 @@ The workflow expects the following structure:
 
 ---
 
-### Workflow Usage – High‑Level
+### Orchestrator Usage – High‑Level
 
 The main interaction model is:
 
@@ -96,8 +96,8 @@ For a full narrative walkthrough, see `docs/INSTRUCTION.md`.
 - **Clone your fork** locally:
 
 ```bash
-git clone https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-workflow.git
-cd verilog-copilot-workflow
+git clone https://github.com/SJTU-YONGFU-RESEARCH-GRP/verilog-copilot-orchestrator.git
+cd verilog-copilot-orchestrator
 ```
 
 - Ensure you have:
